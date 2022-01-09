@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 50% 50%;
+}
+
+.section-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #192027;
+    color: #fff;
+}
+
+.section-1 h4 {
+    font-weight: 600;
+    font-size: 54px;
+}
+
+.section-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 .watch {
+    display: grid;
+    grid-template-rows: 10% 70% 20%;
+    width: 285px;
+    height: 325px;
+    background-color: #000;
+    border-radius: 70px;
+    color: #fff;
+    box-shadow: 0px 22px rgb(60, 60, 60), 0px -24px rgb(60, 60, 60);
+}
+
+.section-2 .watch-icons {
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.section-2 .watch-icons i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.section-2 .watch-icons {
+    padding-top: 14px;
+}
+
+.section-2 .stop-icons i {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.section-2 .stop-icons {
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+}
+
+.section-2 .watch .watch-time p {
+    text-align: center;
+    padding-top: 8px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.iconActive {
+    opacity: 0.2;
+}
+
+.section-2 .watch .main-section .inner-main {
+    text-align: center;
+    /* margin: 0px 25px; */
+    border-radius: 30px;
+}
+
+.section-2 .watch .main-section .inner-main .inner-time {
+    transform: translateY(-20px);
+}
+
+.section-2 .watch .main-section .inner-main {
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.section-2 .watch .main-section .inner-main-message {
+    background-color: #fff;
+    color: black;
+    padding: 20px 10px;
+    text-align: justify;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.section-2 .watch .main-section .inner-main .class {
+    font-size: 1rem;
+    color: black;
+}
+
+.section-2 .watch .main-section h4 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 65px;
+    padding-top: 20px;
+}
+
+.section-2 .watch .main-section .date-main {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    top: -18px;
+}
+
+.sub-stopTime {
+    margin: 0px 25px;
+    text-align: center;
+    font-size: 44px;
+    color: rgb(109, 109, 109);
+    position: relative;
+    bottom: 16px;
+}
+
+.main-stopTime {
+    margin: 0px 25px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.message-content {
+    background-color: #fff;
+    padding: 20px 20px;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.below-Message {
+    margin-top: 10px;
+}
+
+.inner-main {
+    position: relative;
+}
+
+.song-media {
+    position: absolute;
+    height: 70%;
+    width: 90%;
+    overflow-y: scroll;
+    justify-content: center;
+}
+
+.song-media::-webkit-scrollbar {
+    width: 4px;
+}
+
+.song-media::-webkit-scrollbar-thumb {
+    background: rgb(104, 104, 104);
+    border-radius: 4px;
+}
+
+.song-media .song {
+    display: grid;
+    grid-template-columns: 19% 59% 19%;
+    grid-column-gap: 1%;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+}
+
+.active-song {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding-left: 27px;
+    padding-right: 27px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.active-control {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(63, 63, 63, 0.719);
+    height: 100%;
+    justify-content: center;
+    padding: 6px;
+}
+
+.active-control p:nth-child(1) {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.active-control p:nth-child(2) {
+    font-size: 0.8rem;
+    color: rgb(192, 192, 192);
+}
+
+.active-control div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.active-control div i {
+    cursor: pointer;
+}
+
+.active-control div .duration {
+    cursor: e-resize;
+}
+
+.active-control div .duration {
+    width: 100px;
+    height: 30%;
+    background-color: #ccc;
+}
+
+.active-img {
+    height: 100%;
+    display: flex;
+}
+
+.active-song img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.song-media .song:active {
+    background-color: rgb(78, 78, 78);
+}
+
+.song-media .song .song-number {
+    font-size: 1.0rem;
+    color: rgb(143, 143, 143);
+    margin-left: auto;
+}
+
+.song-media .song .song-name {
+    font-size: 0.9rem;
+    color: rgb(192, 192, 192);
+    /* font-weight: 500; */
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+.song-media .song .song-duration {
+    font-size: 1.0rem;
+    color: rgb(143, 143, 143);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width:1200px) {
+    .container {
+        display: grid;
+        min-height: 140vh;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+    }
+}
